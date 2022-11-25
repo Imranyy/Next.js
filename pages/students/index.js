@@ -1,5 +1,6 @@
 import Head from "next/head";
-import styles from '../../styles/Students.module.css'
+import styles from '../../styles/Students.module.css';
+import Link from 'next/link';
 //fetches data
 export const getStaticProps=async()=>{
     try {
@@ -25,9 +26,9 @@ const Students=({students})=>{
         </Head>
             <h1>All Students</h1>
             {students.map((student)=>(
-                <div key={student.id}>
-                    <a> <h3 className={styles.single}>{student.name}</h3></a>
-                </div>
+                <Link href={`/students/${student.id}`} key={student.id}>
+                     <h3 className={styles.single}>{student.name}</h3>
+                </Link>
             ))}
         </>
     )
