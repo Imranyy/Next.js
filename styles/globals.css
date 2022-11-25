@@ -41,3 +41,10 @@ footer{
 footer a{
   margin-right: 10px;
 }
+.not-found{
+  text-align: center;
+  height: 400px;
+}
+.not-found h1{
+  margin-bottom: 20px;
+}
