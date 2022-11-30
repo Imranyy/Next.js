@@ -20,11 +20,11 @@ const Students=({students})=>{
     return(
         <>
         <Head>
-            <title>Ninja List</title>
+            <title>Game List</title>
             <metadata name='keywords' content='ninjas'/>
             <link type='favicon' href='/hecker.ico'/>
         </Head>
-            <h1>All Students</h1>
+            <h1>All Games</h1>
             {students.map((student)=>(
                 <Link href={`/students/${student.id}`} key={student.id}>
                      <h3 className={styles.single}>{student.name}</h3>
